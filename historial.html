@@ -67,6 +67,12 @@
           return myParam
         }
 
+        function openPDF(){
+          window.open("excel/"+ CargarLic()+".pdf","_blank");
+        }
+      
+      
+      
 
         //Llamada a la función para que se ejecute al cargar la página.
       //  Cargar();
@@ -93,20 +99,27 @@
       </h1>
       <script>
         let licencia = CargarLic();
-        document.body.innerHTML = "<h1>La licenciencia es:  " + licencia +"</h1>";
+        document.body.innerHTML = "<h1>La licenciencia es:  " + licencia +"</h1>" + ;
         let nombre = CargarNom();
-        document.body.innerHTML = "<h1> " + nombre + "</h1>";
+        document.body.innerHTML = "<h1> " + nombre + "</h1>" + ;
+        let fichero = "excel/" + CargarLic() + ".pdf";
         
-        <embed src="excel/" + CargarLic()+ ".pdf" type="application/pdf" width=100% height=100%></embed>
+        openPDF()";
+        
+        
+        
+        
         
         
        </script>
        
     
        <div>
-        <!-- <embed src="excel/CM41674041.pdf" type="application/pdf" width=100% height=100%></embed>  -->
-        <embed src="excel/" + <script>CargarLic()</script> + ".pdf" type="application/pdf" width=100% height=100%></embed>
+         
+        <!-- <embed src="excel/CM41674041.pdf" type="application/pdf" width=100% height=100%></embed>  
+        <embed src="excel/" + <script>CargarLic()</script> + ".pdf" type="application/pdf" width=100% height=100%></embed> -->
 
+  
        </div
     
     
