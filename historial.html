@@ -49,12 +49,12 @@
             //Recuperamos el valor de un parámetro específico.
             var myParam = qs["licencia"];
 
-            alert(myParam);
+       //     alert(myParam);
         }
 
 
         //Llamada a la función para que se ejecute al cargar la página.
-        Cargar();
+      //  Cargar();
 
     </script>
     
@@ -74,12 +74,13 @@
     
     <!-- Page Heading -->
       <h1 class="my-4">HISTDDDDORIAL DE:  
-        <small>JesuDDDDs Adrian</small>
+        <small>JesaaaaaaaaaaDs Adrian</small>
       </h1>
-       
-
-            Cargar();
-       
+      <script>
+        let licencia = Cargar();
+        document.body.innerHTML = "<h1>La licenciencia es:  " + licencia
+        "</h1>"
+       </script>
        
        
   </body>
