@@ -71,7 +71,11 @@
           window.open("excel/"+ CargarLic()+".pdf","_blank");
         }
       
-      
+      function abrirpdf(){
+        var formulario = document.forms['name_formulario'];
+        var rutapdf=formulario.elements['imput1'].value+formulario.elements['imput2'].value+'.pdf';
+        window.open(rutapdf,'name_iframe_lectura');
+      }   
       
 
         //Llamada a la función para que se ejecute al cargar la página.
@@ -102,11 +106,11 @@
     <p> otra linea </p>
     
 
-  
+  <input type="button" onclick="abrirpdf();" />
     
     <!-- Page Heading
       <h1 class="my-4"> DE:  
-        <small>En El qqqqrODY</small>
+        <small>En El AAAArODY</small>
       </h1>
                         
       
