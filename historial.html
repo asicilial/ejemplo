@@ -41,13 +41,27 @@
 
 
         //DESCRIPCIÓN: Realiza las tareas oportunas al cargar la página.
-        function Cargar() {
+        function CargarLic() {
 
             //Recuperamos los datos de la querystring.
             var qs = getQueryStrings();
 
             //Recuperamos el valor de un parámetro específico.
             var myParam = qs["licencia"];
+
+       //     alert(myParam);
+          return myParam
+        }
+      
+      
+      
+         function CargarNom() {
+
+            //Recuperamos los datos de la querystring.
+            var qs = getQueryStrings();
+
+            //Recuperamos el valor de un parámetro específico.
+            var myParam = qs["nombre"];
 
        //     alert(myParam);
           return myParam
@@ -78,8 +92,10 @@
         <small>JesaaaaaaaaaaDs Adrian</small>
       </h1>
       <script>
-        let licencia = Cargar();
-        document.body.innerHTML = "<h1>La licenciencia es:  " + licencia
+        let licencia = CargarLic();
+        document.body.innerHTML = "<h1>La licenciencia es:  " + licencia;
+        let nombre = CargarNom();
+        document.body.innerHTML = "<h1>Se llama:  " + nombre;
         "</h1>"
        </script>
        
