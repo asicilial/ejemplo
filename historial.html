@@ -16,24 +16,30 @@
     <!-- Custom styles for this template -->
     <link href="css/3-col-portfolio.css" rel="stylesheet">
 
-    <script type="text/javascript">
-    var paramstr = window.location.search.substr(1);
-    var paramarr = paramstr.split ("&");
-    var params = {};
-
-    for ( var i = 0; i < paramarr.length; i++) {
-    var tmparr = paramarr[i].split("=");
-    params[tmparr[0]] = tmparr[1];
+    function leerGET() { 
+     var cadGET = location.search.substr(1, location.search.length); 
+     var arrGET = cadGET.split("&"); 
+     var asocGET = new Array(); 
+     var variable = "";
+      var valor = ""; 
+     for (i = 0; i < arrGET.length; i++) { 
+      var aux = arrGET[i].split("=");
+      variable = aux[0]; 
+      valor = aux[1]; 
+      asocGET[variable] = valor; 
+     } 
+     return asocGET;
     }
-    if (params['variable']) {
-    console.log('HISTORIAL DE: '+params['variable']);
-    } else {
-    console.log('No se envió el parámetro variable');
-    }
-    </script>
 
 
-
+    $(document).ready(function() { 
+ var paresVarValor = leerGET(); 
+ for (obj in paresVarValor) { 
+  idLote = paresVarValor[obj]; 
+  // document.write("'" + obj + "': " + paresVarValor[obj] + "");
+   alert("'' + paresVarValor[obj]); 
+ } 
+});
 
   </head>
   <body>
@@ -42,7 +48,19 @@
     
     
     <!-- Page Heading -->
-      <h1 class="my-4">HISTDDDDORIAL DE:
+      <h1 class="my-4">HISTDDDDORIAL DE:  
         <small>JesuDDDDs Adrian</small>
       </h1>
+       
+           $(document).ready(function() { 
+ var paresVarValor = leerGET(); 
+ for (obj in paresVarValor) { 
+  idLote = paresVarValor[obj]; 
+  // document.write("'" + obj + "': " + paresVarValor[obj] + "");
+   alert("'' + paresVarValor[obj]); 
+ } 
+});
+       
+       
+       
   </body>
