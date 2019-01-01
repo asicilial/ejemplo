@@ -77,6 +77,13 @@
         window.open(rutapdf,'name_iframe_lectura');
       }   
       
+      
+      let licencia = CargarLic();
+      let nombre = CargarNom();
+      let fichero = "excel/" + licencia + ".pdf";
+      
+      document.body.innerHTML = "La licencia es:  " + licencia + "  El jugador es: " + nombre + " El nombre del fichero: "  + fichero;
+      
 
         //Llamada a la función para que se ejecute al cargar la página.
       //  Cargar();
