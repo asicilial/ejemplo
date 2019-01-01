@@ -16,31 +16,64 @@
     <!-- Custom styles for this template -->
     <link href="css/3-col-portfolio.css" rel="stylesheet">
 
-    function leerGET() { 
-     var cadGET = location.search.substr(1, location.search.length); 
-     var arrGET = cadGET.split("&"); 
-     var asocGET = new Array(); 
-     var variable = "";
-      var valor = ""; 
-     for (i = 0; i < arrGET.length; i++) { 
-      var aux = arrGET[i].split("=");
-      variable = aux[0]; 
-      valor = aux[1]; 
-      asocGET[variable] = valor; 
-     } 
-     return asocGET;
-    }
+    
+    <script type="text/javascript">
+
+        //DESCRIPCIÓN: Recupera los datos de la querystring.
+        function getQueryStrings() {
+
+            var assoc = {};
+            var decode = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); };
+            var queryString = location.search.substring(1);
+            var keyValues = queryString.split('&');
+
+            for (var i in keyValues) {
+
+                var key = keyValues[i].split('=');
+
+                if (key.length > 1) {
+                    assoc[decode(key[0])] = decode(key[1]);
+                }
+            }
+
+            return assoc;
+        }
 
 
-    $(document).ready(function() { 
- var paresVarValor = leerGET(); 
- for (obj in paresVarValor) { 
-  idLote = paresVarValor[obj]; 
-  // document.write("'" + obj + "': " + paresVarValor[obj] + "");
-   alert("'' + paresVarValor[obj]); 
- } 
-});
+        //DESCRIPCIÓN: Realiza las tareas oportunas al cargar la página.
+        function Cargar() {
 
+            //Recuperamos los datos de la querystring.
+            var qs = getQueryStrings();
+
+            //Recuperamos el valor de un parámetro específico.
+            var myParam = qs["IdRegistro"];
+
+            alert(myParam);
+        }
+
+
+        //Llamada a la función para que se ejecute al cargar la página.
+        Cargar();
+
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
   </head>
   <body>
 
@@ -52,14 +85,8 @@
         <small>JesuDDDDs Adrian</small>
       </h1>
        
-           $(document).ready(function() { 
- var paresVarValor = leerGET(); 
- for (obj in paresVarValor) { 
-  idLote = paresVarValor[obj]; 
-  // document.write("'" + obj + "': " + paresVarValor[obj] + "");
-   alert("'' + paresVarValor[obj]); 
- } 
-});
+
+            Cargar();
        
        
        
